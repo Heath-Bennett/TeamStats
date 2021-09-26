@@ -48,12 +48,24 @@ let team = {
         }
 
         this._players.push(newPlayer);
+    },
+
+    addGame (opponentName, teamScore, opponentScore){
+        let newGame = {
+            opponent: opponentName,
+            teamScore: teamScore,
+            opponentScore: opponentScore
+        }
+        this._games.push(newGame);
     }
 
 };
 team.addPlayer('Steph', 'Curry', 28);
 team.addPlayer('Lisa', 'Leslie', 44);
 team.addPlayer('Bugs', 'Bunny', 76);
+team.addGame('Rays', 6, 5);
+team.addGame('Indians', 12, 6);
+team.addGame('Dodgers', 2, 1);
 console.log(team._games[0]);
 console.log(team.teamPlayers);
 console.log(team.teamGames)
